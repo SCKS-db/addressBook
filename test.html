@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create - SKSAddressBook</title>
+
+    
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+<meta name="x-stylesheet-fallback-test" content="" class="sr-only" /><script>!function(a,b,c,d){var e,f=document,g=f.getElementsByTagName("SCRIPT"),h=g[g.length-1].previousElementSibling,i=f.defaultView&&f.defaultView.getComputedStyle?f.defaultView.getComputedStyle(h):h.currentStyle;if(i&&i[a]!==b)for(e=0;e<c.length;e++)f.write('<link href="'+c[e]+'" '+d+"/>")}("position","absolute",["\/lib\/bootstrap\/dist\/css\/bootstrap.min.css"], "rel=\u0022stylesheet\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-ggOyR0iXCbMQv3Xipma34MD\u002BdH\/1fQ784\/j6cY\/iJTQUOhcWr7x9JvoRxT2MZw1T\u0022 ");</script>
+    
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="/">SKSAddressBook</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Address/Index">View</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            
+
+<h1>Register</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form onsubmit="onSubmit(this)" action="/" method="post">
+            
+            <div class="form-group">
+                <label class="control-label" for="FirstName">Name</label>
+                <input class="form-control" type="text" data-val="true" data-val-required="The Name field is required." id="FirstName" name="FirstName" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="MiddleName">Middle Name</label>
+                <input class="form-control" type="text" data-val="true" data-val-required="The Middle Name field is required." id="MiddleName" name="MiddleName" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="MiddleName" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="LastName">Surname</label>
+                <input class="form-control" type="text" data-val="true" data-val-required="The Surname field is required." id="LastName" name="LastName" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="Address">Address</label>
+                <textarea class="form-control" data-val="true" data-val-required="The Address field is required." id="Address" name="Address">
+</textarea>
+                <span class="text-danger field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+            </div>
+             <div class="form-group">
+                <label class="control-label" for="LandMark">Land Mark</label>
+                <input class="form-control" type="text" id="LandMark" name="LandMark" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="LandMark" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="City">City</label>
+                <input class="form-control" type="text" data-val="true" data-val-required="The City field is required." id="City" name="City" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="City" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="PinCode">Pin Code</label>
+                <input class="form-control" type="text" data-val="true" data-val-required="The Pin Code field is required." id="PinCode" name="PinCode" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="PinCode" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="PhoneNumber">Phone Number</label>
+                <input class="form-control" type="tel" data-val="true" data-val-required="The Phone Number field is required." id="PhoneNumber" name="PhoneNumber" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="AltPhoneNumber">Alt. Phone Number</label>
+                <input class="form-control" type="tel" id="AltPhoneNumber" name="AltPhoneNumber" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="AltPhoneNumber" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="Email">Email</label>
+                <input class="form-control" type="email" id="Email" name="Email" value="" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NaU0VT_Wx1PoqZtxuutzXgi31yBOskhknl08Ml1Qy5lklQEwwHVglC7tKKZRbRuctK7ILpaZ6l2fQFam2SzyutQcGJLa1DJWswOgLyIDeGXx7BydS-28a_gsuhjyOGGjAndvGumYvGCprk8y8KkixU" /></form>
+    </div>
+</div>
+
+<div>
+    <a href="/Address/Index">Back to List</a>
+</div>
+
+
+        </main>
+    </div>
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022\/lib\/jquery\/dist\/jquery.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha256-FgpCb\/KJQlLNfOu91ta32o\/NMZxltwRo8QtmkMRdAu8=\u0022\u003E\u003C\/script\u003E"));</script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+<script>(window.jQuery && window.jQuery.fn && window.jQuery.fn.modal||document.write("\u003Cscript src=\u0022\/lib\/bootstrap\/dist\/js\/bootstrap.bundle.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-xrRywqdh3PHs8keKZN\u002B8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o\u0022\u003E\u003C\/script\u003E"));</script>
+    
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" crossorigin="anonymous" integrity="sha256-F6h55Qw6sweK+t7SiOJX+2bpSAa3b/fnlrVCJvmEj1A=">
+    </script>
+<script>(window.jQuery && window.jQuery.validator||document.write("\u003Cscript src=\u0022\/lib\/jquery-validation\/dist\/jquery.validate.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha256-F6h55Qw6sweK\u002Bt7SiOJX\u002B2bpSAa3b\/fnlrVCJvmEj1A=\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js" crossorigin="anonymous" integrity="sha256-9GycpJnliUjJDVDqP0UEu/bsm9U+3dnQUH8+3W10vkY=">
+    </script>
+<script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\u003Cscript src=\u0022\/lib\/jquery-validation-unobtrusive\/jquery.validate.unobtrusive.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha256-9GycpJnliUjJDVDqP0UEu\/bsm9U\u002B3dnQUH8\u002B3W10vkY=\u0022\u003E\u003C\/script\u003E"));</script>
+
+
+    <script>
+       function onSubmit(form)
+       {
+            if($(form).valid())
+            {
+                $('input[type=submit]', form).prop('disabled', true);
+            }
+       }
+    </script>
+
+</body>
+</html>
